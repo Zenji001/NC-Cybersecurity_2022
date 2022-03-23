@@ -1,4 +1,6 @@
 Description of the Topology
+![network_diagram_complete](https://user-images.githubusercontent.com/100797437/159629946-4e238edc-cdf3-4a06-a448-8b1ee32b03d5.png)
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
@@ -19,7 +21,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the JumpBox and ELK Stack (Kibana) machines can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
 My Home IP Address
-Machines within the network can only be accessed by Jump-Box-Provisioner.
+Machines within the network can only be accessed by JumpBox (104.40.58.240)
 
 A summary of the access policies in place can be found in the table below.
 
@@ -67,7 +69,7 @@ Copy the elk-stack-playbook.yml playbook file to /etc/ansible/roles/ directory i
 $ sudo docker cp elk-stack-playbook.yml <container.name>:/etc/ansible/roles/elk-stack-playbook.yml
 Optional: Copy the whole directory for the Metricbeat and Filebeat playbooks and configuration files.
 
-$ sudo docker cp Ansible/* <container.name>:/etc/ansible
+$ sudo docker cp Ansible/*COMPASSIONATE_YALOW:/etc/ansible
 Attach to the ansible docker with $ sudo docker attach <container.name>
 
 Update the /etc/ansible/hosts file to include the ELK stack VM IP address.
