@@ -1,0 +1,6 @@
+The roulette dealer working during every loss was Billy Jones.
+
+He worked 13 times during large losses. I ran the following 
+command to find this number.
+
+#sh Dealer_Loss_Correlation.sh | wc -l
